@@ -1,3 +1,1 @@
 Este é o arquivo 2 da tarefa 3.
-
-adcionando nova linha no arquivo 1
