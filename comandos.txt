@@ -1,0 +1,50 @@
+git init
+
+# Criação dos arquivos iniciais
+echo "Este é o arquivo 1 da tarefa 3." > arquivo1.txt
+echo "Este é o arquivo 2 da tarefa 3." > arquivo2.txt
+echo "Este é o arquivo 3 da tarefa 3." > arquivo3.txt
+
+git add .
+git commit -m "feat:adciona três arquivos de texto, arquivo1, arquivo1, arquivo3"
+
+
+echo -e "\nadcionando nova linha no arquivo 1" >> arquivo1.txt
+echo -e "\nadcionando nova linha no arquivo 1" >> arquivo2.txt
+
+# Verifica status e diferenças
+git status
+git diff
+
+# Adiciona e comita alterações
+git add .
+git commit -m "feat:adciona nova linha no arquivo1 e arquivo2"
+
+# Visualização do histórico
+git log
+git log --oneline
+git log --graph --all
+
+# Reverte o último commit
+git revert HEAD
+
+# Cria uma alteração temporária e faz stash
+git stash
+
+# Cria nova branch e troca de contexto
+git checkout -b nova-feature
+
+# Recupera a alteração do stash
+git stash pop
+
+# Visualiza o histórico de movimentações
+git reflog
+
+# Cria tag no commit inicial
+git tag -a v1.0.0 a2bc3af -m "versão inicial do projeto"
+
+# Conecta com o repositório remoto
+git remote add origin https://github.com/DamiaoNetto/tarefa3-recuperacao-historico-commits.git
+
+# Envia a tag para o repositório remoto
+git push origin v1.0.0
